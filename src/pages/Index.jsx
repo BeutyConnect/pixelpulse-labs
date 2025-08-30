@@ -5,14 +5,14 @@ import Portfolio from "@/components/Portfolio";
 import Team from "@/components/Team";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import Navigation from "@/components/Navigation";
+
 import ScrollAnimations from "@/components/ScrollAnimations";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <ScrollAnimations />
-      <Navigation />
+
       <section id="home">
         <Hero />
       </section>
