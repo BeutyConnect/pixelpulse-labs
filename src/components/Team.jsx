@@ -4,11 +4,10 @@ import { motion } from "framer-motion";
 const Team = () => {
   const team = [
     {
-      name: "Alex Thompson",
+      name: "Kavindu Praneeth",
       role: "CEO & Founder",
-      bio: "Visionary leader with 10+ years in tech entrepreneurship",
-      avatar:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
+
+      avatar: "/public/kavindu.jpg",
       social: {
         linkedin: "#",
         twitter: "#",
@@ -16,11 +15,10 @@ const Team = () => {
       },
     },
     {
-      name: "Sarah Chen",
-      role: "CTO",
-      bio: "Full-stack architect passionate about scalable solutions",
-      avatar:
-        "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop&crop=face",
+      name: "Nalin Sandaruwan",
+      role: "CTO & Founder",
+
+      avatar: "/public/nalin.avif",
       social: {
         linkedin: "#",
         twitter: "#",
@@ -28,11 +26,10 @@ const Team = () => {
       },
     },
     {
-      name: "Marcus Rodriguez",
-      role: "Lead Developer",
-      bio: "Expert in modern web technologies and mobile development",
-      avatar:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face",
+      name: "Supun Kalhara",
+      role: "CMO",
+
+      avatar: "/public/supun.jpg",
       social: {
         linkedin: "#",
         twitter: "#",
@@ -40,11 +37,55 @@ const Team = () => {
       },
     },
     {
-      name: "Emma Wilson",
-      role: "Marketing Specialist",
-      bio: "Digital marketing strategist focused on growth and ROI",
-      avatar:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face",
+      name: "Nipun Sachintha",
+      role: "Lead Engineer",
+
+      avatar: "/public/nipun.jpg",
+      social: {
+        linkedin: "#",
+        twitter: "#",
+        github: "#",
+      },
+    },
+    {
+      name: "Shanika Dilrukshi",
+      role: "Business Analyst",
+
+      avatar: "/public/shanika.jpg",
+      social: {
+        linkedin: "#",
+        twitter: "#",
+        github: "#",
+      },
+    },
+
+    {
+      name: "Darshani Kumari",
+      role: "Frontend Engineer",
+
+      avatar: "/public/darshani.jpg",
+      social: {
+        linkedin: "#",
+        twitter: "#",
+        github: "#",
+      },
+    },
+    {
+      name: "Ernaga Madhushan",
+      role: "Lead Mobile Developer",
+
+      avatar: "/public/eranga.jpg",
+      social: {
+        linkedin: "#",
+        twitter: "#",
+        github: "#",
+      },
+    },
+    {
+      name: "Pasindu Iroshan",
+      role: "Backend Engineer",
+
+      avatar: "/public/pasindu.jpg",
       social: {
         linkedin: "#",
         twitter: "#",
@@ -87,16 +128,29 @@ const Team = () => {
                 damping: 20,
               }}
             >
-              <div className="relative mb-6">
-                <div className="w-24 h-24 mx-auto rounded-full overflow-hidden border-4 border-primary/20 group-hover:border-primary/40 transition-smooth">
-                  <img
-                    src={member.avatar}
-                    alt={member.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-smooth"
-                  />
-                </div>
-                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
-                  <div className="w-4 h-4 gradient-primary rounded-full group-hover:shadow-glow-primary transition-smooth" />
+              <div className="relative mb-8 flex justify-center">
+                <div className="relative">
+                  {/* Glowing background ring */}
+                  <div className="absolute -inset-4 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-lg group-hover:blur-xl group-hover:from-purple-500/40 group-hover:to-pink-500/40 transition-all duration-500"></div>
+
+                  {/* Main avatar container */}
+                  <div className="relative w-36 h-36 mx-auto rounded-full overflow-hidden border-4 border-white/20 group-hover:border-white/40 transition-all duration-500 shadow-2xl">
+                    <img
+                      src={member.avatar}
+                      alt={member.name}
+                      className="w-full h-full object-cover object-center group-hover:scale-110 transition-all duration-700"
+                    />
+
+                    {/* Gradient overlay on hover */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                  </div>
+
+                  {/* Status indicator */}
+                  <div className="absolute -bottom-2 -right-2">
+                    <div className="w-6 h-6 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full border-4 border-background shadow-lg group-hover:scale-110 transition-all duration-300">
+                      <div className="w-full h-full rounded-full bg-gradient-to-r from-green-400 to-emerald-500 animate-pulse"></div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
