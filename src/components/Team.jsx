@@ -7,7 +7,7 @@ const Team = () => {
       name: "Kavindu Praneeth",
       role: "CEO & Founder",
 
-      avatar: "/public/kavindu.jpg",
+      avatar: "/kavindu.jpg",
       social: {
         linkedin: "#",
         twitter: "#",
@@ -18,7 +18,7 @@ const Team = () => {
       name: "Nalin Sandaruwan",
       role: "CTO & Founder",
 
-      avatar: "/public/nalin.avif",
+      avatar: "/nalin.avif",
       social: {
         linkedin: "#",
         twitter: "#",
@@ -29,7 +29,7 @@ const Team = () => {
       name: "Supun Kalhara",
       role: "CMO",
 
-      avatar: "/public/supun.jpg",
+      avatar: "/supun.jpg",
       social: {
         linkedin: "#",
         twitter: "#",
@@ -40,7 +40,7 @@ const Team = () => {
       name: "Nipun Sachintha",
       role: "Lead Engineer",
 
-      avatar: "/public/nipun.jpg",
+      avatar: "/nipun.jpg",
       social: {
         linkedin: "#",
         twitter: "#",
@@ -51,7 +51,7 @@ const Team = () => {
       name: "Shanika Dilrukshi",
       role: "Business Analyst",
 
-      avatar: "/public/shanika.jpg",
+      avatar: "/shanika.jpg",
       social: {
         linkedin: "#",
         twitter: "#",
@@ -63,7 +63,7 @@ const Team = () => {
       name: "Darshani Kumari",
       role: "Frontend Engineer",
 
-      avatar: "/public/darshani.jpg",
+      avatar: "/darshani.jpg",
       social: {
         linkedin: "#",
         twitter: "#",
@@ -74,7 +74,7 @@ const Team = () => {
       name: "Ernaga Madhushan",
       role: "Lead Mobile Developer",
 
-      avatar: "/public/eranga.jpg",
+      avatar: "/eranga.jpg",
       social: {
         linkedin: "#",
         twitter: "#",
@@ -85,7 +85,7 @@ const Team = () => {
       name: "Pasindu Iroshan",
       role: "Backend Engineer",
 
-      avatar: "/public/pasindu.jpg",
+      avatar: "/pasindu.jpg",
       social: {
         linkedin: "#",
         twitter: "#",
