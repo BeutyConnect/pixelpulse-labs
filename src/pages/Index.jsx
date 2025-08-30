@@ -5,16 +5,32 @@ import Portfolio from "@/components/Portfolio";
 import Team from "@/components/Team";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import Navigation from "@/components/Navigation";
+import ScrollAnimations from "@/components/ScrollAnimations";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Hero />
-      <About />
-      <Services />
-      <Portfolio />
-      <Team />
-      <Contact />
+      <ScrollAnimations />
+      <Navigation />
+      <section id="home">
+        <Hero />
+      </section>
+      <section id="about">
+        <About />
+      </section>
+      <section id="services">
+        <Services />
+      </section>
+      <section id="portfolio">
+        <Portfolio />
+      </section>
+      <section id="team">
+        <Team />
+      </section>
+      <section id="contact">
+        <Contact />
+      </section>
       <Footer />
     </div>
   );

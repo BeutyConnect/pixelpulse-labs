@@ -6,6 +6,7 @@ import {
   Code, 
   TrendingUp 
 } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Services = () => {
   const services = [
@@ -72,20 +73,57 @@ const Services = () => {
               
               <div className="space-y-6">
                 {category.services.map((service, serviceIndex) => (
-                  <div 
+                  <motion.div 
                     key={serviceIndex}
-                    className="glass-card p-6 rounded-2xl hover:bg-card/90 transition-smooth group"
+                    className="glass-card p-6 rounded-2xl group cursor-pointer relative overflow-hidden"
+                    whileHover={{ 
+                      scale: 1.02,
+                      y: -5,
+                      boxShadow: "0 20px 40px rgba(139, 92, 246, 0.2)"
+                    }}
+                    whileTap={{ scale: 0.98 }}
+                    initial={{ opacity: 0, x: categoryIndex === 0 ? -50 : 50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ 
+                      duration: 0.5, 
+                      delay: serviceIndex * 0.1,
+                      type: "spring",
+                      stiffness: 300,
+                      damping: 20
+                    }}
                   >
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 gradient-secondary rounded-xl flex items-center justify-center group-hover:shadow-glow-primary transition-smooth flex-shrink-0">
-                        <service.icon className="w-6 h-6 text-primary" />
-                      </div>
-                      <div>
-                        <h4 className="text-xl font-semibold mb-2">{service.title}</h4>
-                        <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                    {/* Hover overlay */}
+                    <motion.div 
+                      className="absolute inset-0 bg-gradient-to-r from-violet-500/10 to-purple-500/10 opacity-0"
+                      whileHover={{ opacity: 1 }}
+                      transition={{ duration: 0.3 }}
+                    />
+                    
+                    <div className="relative z-10">
+                      <div className="flex items-start gap-4">
+                        <motion.div 
+                          className="w-12 h-12 bg-gradient-to-br from-violet-500 to-purple-500 rounded-xl flex items-center justify-center flex-shrink-0"
+                          whileHover={{ 
+                            rotate: 360,
+                            boxShadow: "0 0 25px rgba(139, 92, 246, 0.6)"
+                          }}
+                          transition={{ duration: 0.6 }}
+                        >
+                          <service.icon className="w-6 h-6 text-white" />
+                        </motion.div>
+                        <div>
+                          <motion.h4 
+                            className="text-xl font-semibold mb-2"
+                            whileHover={{ color: "#8b5cf6" }}
+                          >
+                            {service.title}
+                          </motion.h4>
+                          <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </div>

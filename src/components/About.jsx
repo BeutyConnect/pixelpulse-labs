@@ -1,4 +1,5 @@
 import { Users, Target, Lightbulb, Shield } from "lucide-react";
+import { motion } from "framer-motion";
 
 const About = () => {
   const values = [
@@ -39,18 +40,55 @@ const About = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {values.map((value, index) => (
-            <div 
+            <motion.div 
               key={index}
-              className="glass-card p-6 rounded-2xl hover:bg-card/90 transition-smooth group"
+              className="glass-card p-6 rounded-2xl group cursor-pointer relative overflow-hidden"
+              whileHover={{ 
+                scale: 1.05,
+                y: -10,
+                boxShadow: "0 25px 50px rgba(6, 182, 212, 0.2)"
+              }}
+              whileTap={{ scale: 0.95 }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ 
+                duration: 0.5, 
+                delay: index * 0.1,
+                type: "spring",
+                stiffness: 300,
+                damping: 20
+              }}
             >
-              <div className="mb-4">
-                <div className="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center group-hover:shadow-glow-primary transition-smooth">
-                  <value.icon className="w-6 h-6 text-primary-foreground" />
+              {/* Hover overlay */}
+              <motion.div 
+                className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-sky-500/10 opacity-0"
+                whileHover={{ opacity: 1 }}
+                transition={{ duration: 0.3 }}
+              />
+              
+              <div className="relative z-10">
+                <div className="mb-4">
+                  <motion.div 
+                    className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-sky-500 rounded-xl flex items-center justify-center"
+                    whileHover={{ 
+                      rotate: 360,
+                      boxShadow: "0 0 30px rgba(6, 182, 212, 0.6)"
+                    }}
+                    transition={{ duration: 0.6 }}
+                  >
+                    <value.icon className="w-6 h-6 text-white" />
+                  </motion.div>
                 </div>
+                <motion.h3 
+                  className="text-xl font-semibold mb-3"
+                  whileHover={{ color: "#06b6d4" }}
+                >
+                  {value.title}
+                </motion.h3>
+                <p className="text-muted-foreground leading-relaxed">{value.description}</p>
               </div>
-              <h3 className="text-xl font-semibold mb-3">{value.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{value.description}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
