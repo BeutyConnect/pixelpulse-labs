@@ -3,6 +3,7 @@ import About from "@/components/About";
 import Services from "@/components/Services";
 import Portfolio from "@/components/Portfolio";
 import Team from "@/components/Team";
+import WhyChooseUs from "@/components/WhyChooseUs";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -13,24 +14,41 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <ScrollAnimations />
 
-      <section id="home">
+      {/* Hero Section */}
+      <section id="home" className="relative">
         <Hero />
       </section>
-      <section id="about">
+
+      {/* About Section - Dark Gray */}
+      <section id="about" className="relative bg-gray-900">
         <About />
       </section>
-      <section id="services">
+
+      {/* Services Section - Dark Blue */}
+      <section id="services" className="relative ">
         <Services />
       </section>
-      <section id="portfolio">
+
+      {/* Portfolio Section - Dark Red */}
+      <section id="portfolio" className="relative bg-gray-900">
         <Portfolio />
       </section>
-      <section id="team">
+
+      {/* Team Section - Dark Blue */}
+      <section id="team" className="relative ">
         <Team />
       </section>
-      <section id="contact">
+
+      {/* Why Choose Us Section - Dark Gray */}
+      <section id="why-choose-us" className="relative bg-gray-900">
+        <WhyChooseUs />
+      </section>
+
+      {/* Contact Section - Dark Blue */}
+      <section id="contact" className="relative">
         <Contact />
       </section>
+
       <Footer />
     </div>
   );

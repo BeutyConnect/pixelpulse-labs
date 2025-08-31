@@ -401,92 +401,29 @@ const Contact = () => {
               </motion.div>
             </div>
           </motion.div>
-
-          {/* Why Choose Us - Below Form */}
           <motion.div
-            className="max-w-[900px] mx-auto"
-            initial={{ opacity: 0, y: 40 }}
+            className="glass-card p-6 rounded-2xl bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-blue-500/10 border-purple-500/20 mt-12"
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
+            whileHover={{ scale: 1.02 }}
           >
-            <motion.h3
-              className="text-3xl font-bold mb-12 text-center"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.9 }}
-            >
-              Why Choose <span className="hero-text">Us?</span>
-            </motion.h3>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                {
-                  icon: "🚀",
-                  title: "Lightning Fast",
-                  desc: "24/7 Support & Quick Response Time",
-                },
-                {
-                  icon: "⚡",
-                  title: "Agile Process",
-                  desc: "Modern Development Methods & Best Practices",
-                },
-                {
-                  icon: "💎",
-                  title: "Premium Quality",
-                  desc: "100% Client Satisfaction Rate Guaranteed",
-                },
-                {
-                  icon: "🛡️",
-                  title: "Long-term Support",
-                  desc: "Post-Launch Support & Maintenance Included",
-                },
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  className="glass-card p-6 rounded-2xl hover:border-white/20 transition-all duration-300 group text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: 1.0 + index * 0.1 }}
-                  whileHover={{ scale: 1.05, y: -5 }}
-                >
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-all duration-300">
-                    {item.icon}
-                  </div>
-                  <h4 className="font-semibold mb-3 text-lg group-hover:text-primary transition-colors duration-300">
-                    {item.title}
-                  </h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {item.desc}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* Contact Info Bar */}
-            <motion.div
-              className="glass-card p-6 rounded-2xl bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-blue-500/10 border-purple-500/20 mt-12"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.4 }}
-              whileHover={{ scale: 1.02 }}
-            >
-              <div className="flex flex-col md:flex-row items-center justify-center gap-8 text-center">
-                <div className="flex items-center gap-2">
-                  <span className="text-2xl">📧</span>
-                  <span className="text-sm font-medium">
-                    contactpixelpulselabs@gmail.com
-                  </span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-2xl">📱</span>
-                  <span className="text-sm font-medium">+94 76 482 337 2</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-2xl">⏰</span>
-                  <span className="text-sm font-medium">Mon-Fri, 9AM-6PM</span>
-                </div>
+            <div className="flex flex-col md:flex-row items-center justify-center gap-8 text-center">
+              <div className="flex items-center gap-2">
+                <span className="text-2xl">📧</span>
+                <span className="text-sm font-medium">
+                  contactpixelpulselabs@gmail.com
+                </span>
               </div>
-            </motion.div>
+              <div className="flex items-center gap-2">
+                <span className="text-2xl">📱</span>
+                <span className="text-sm font-medium">+94 76 482 337 2</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-2xl">⏰</span>
+                <span className="text-sm font-medium">Mon-Fri, 9AM-6PM</span>
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>
