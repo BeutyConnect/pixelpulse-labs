@@ -7,19 +7,31 @@ const Team = () => {
       name: "Kavindu Praneeth",
       role: "CEO & Founder",
       avatar: "/kavindu.jpg",
-      social: { linkedin: "#", twitter: "#", github: "#" },
+      social: {
+        linkedin: "https://www.linkedin.com/in/kavindu-praneeth/",
+        twitter: "#",
+        github: "#",
+      },
     },
     {
       name: "Nalin Sandaruwan",
       role: "CTO & Founder",
       avatar: "/nalin.avif",
-      social: { linkedin: "#", twitter: "#", github: "#" },
+      social: {
+        linkedin: "https://www.linkedin.com/in/nalin-s-bandara/",
+        twitter: "#",
+        github: "#",
+      },
     },
     {
       name: "Supun Kalhara",
       role: "CMO",
       avatar: "/supun.jpg",
-      social: { linkedin: "#", twitter: "#", github: "#" },
+      social: {
+        linkedin: "https://www.linkedin.com/in/vsupun-kalhara/",
+        twitter: "#",
+        github: "#",
+      },
     },
     {
       name: "Nipun Sachintha",
@@ -31,25 +43,41 @@ const Team = () => {
       name: "Shanika Dilrukshi",
       role: "Business Analyst",
       avatar: "/shanika.jpg",
-      social: { linkedin: "#", twitter: "#", github: "#" },
+      social: {
+        linkedin: "https://www.linkedin.com/in/shanika-dilrukshi-82aa6a295/",
+        twitter: "#",
+        github: "#",
+      },
     },
     {
       name: "Darshani Kumari",
       role: "Frontend Engineer",
       avatar: "/darshani.jpg",
-      social: { linkedin: "#", twitter: "#", github: "#" },
+      social: {
+        linkedin: "https://www.linkedin.com/in/darshani-kumari-149219308/",
+        twitter: "#",
+        github: "#",
+      },
     },
     {
       name: "Ernaga Madhushan",
       role: "Lead Mobile Developer",
       avatar: "/eranga.jpg",
-      social: { linkedin: "#", twitter: "#", github: "#" },
+      social: {
+        linkedin: "https://www.linkedin.com/in/erangamadhushan/",
+        twitter: "#",
+        github: "#",
+      },
     },
     {
       name: "Pasindu Iroshan",
       role: "Backend Engineer",
       avatar: "/pasindu.jpg",
-      social: { linkedin: "#", twitter: "#", github: "#" },
+      social: {
+        linkedin: "https://www.linkedin.com/in/pasindu-iroshan-9423a72b4/",
+        twitter: "#",
+        github: "#",
+      },
     },
   ];
 
@@ -65,11 +93,11 @@ const Team = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {team.map((member, index) => (
             <motion.div
               key={index}
-              className="glass-card w-full max-w-md mx-auto p-8 pt-[70px] rounded-2xl text-center group cursor-pointer relative overflow-hidden"
+              className="glass-card w-full max-w-md mx-auto p-8  rounded-2xl text-center group cursor-pointer relative overflow-hidden"
               whileHover={{
                 scale: 1.05,
                 y: -10,
@@ -93,7 +121,7 @@ const Team = () => {
                   <div className="absolute -inset-8 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-xl group-hover:blur-2xl group-hover:from-purple-500/40 group-hover:to-pink-500/40 transition-all duration-500"></div>
 
                   {/* Larger avatar */}
-                  <div className="relative w-56 h-56 mx-auto rounded-full overflow-hidden border-4 border-white/20 group-hover:border-white/40 transition-all duration-500 shadow-2xl flex items-center justify-center">
+                  <div className="relative w-40 h-40 mx-auto rounded-full overflow-hidden border-4 border-white/20 group-hover:border-white/40 transition-all duration-500 shadow-2xl flex items-center justify-center">
                     <img
                       src={member.avatar}
                       alt={member.name}
@@ -105,15 +133,17 @@ const Team = () => {
                   </div>
 
                   {/* Status indicator */}
-                  <div className="absolute -bottom-4 -right-4">
+                  {/* <div className="absolute -bottom-4 -right-4">
                     <div className="w-8 h-8 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full border-4 border-background shadow-lg group-hover:scale-110 transition-all duration-300">
                       <div className="w-full h-full rounded-full bg-gradient-to-r from-green-400 to-emerald-500 animate-pulse"></div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
-              <h3 className="text-2xl font-semibold mb-2">{member.name}</h3>
+              <h3 className="text-2xl font-semibold mb-2 -mt-8">
+                {member.name}
+              </h3>
               <p className="text-primary font-medium mb-4">{member.role}</p>
 
               <div className="flex justify-center gap-4">

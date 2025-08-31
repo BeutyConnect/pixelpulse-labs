@@ -5,7 +5,7 @@ const About = () => {
   const values = [
     {
       icon: Users,
-      title: "4-Member Team",
+      title: "Members of Team",
       description: "CEO, CTO, Developers, and Marketing Specialist working in perfect harmony"
     },
     {
@@ -33,7 +33,7 @@ const About = () => {
             About <span className="hero-text">PixelPulse Labs</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We're a passionate 4-member team dedicated to transforming your digital presence. 
+            We're a passionate  team of members dedicated to transforming your digital presence. 
             Our unique blend of technical expertise and creative vision delivers exceptional results.
           </p>
         </div>
