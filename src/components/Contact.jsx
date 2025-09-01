@@ -118,17 +118,17 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-24 px-6">
+    <section className="py-12 sm:py-16 md:py-24 px-4 sm:px-6">
       <div className="container mx-auto max-w-4xl">
         {/* Section Header */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12 md:mb-16"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
           <motion.h2
-            className="text-4xl md:text-5xl font-bold mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -136,7 +136,7 @@ const Contact = () => {
             Let's Work <span className="hero-text">Together</span>
           </motion.h2>
           <motion.p
-            className="text-xl text-muted-foreground max-w-3xl mx-auto"
+            className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-2 sm:px-0"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -146,21 +146,21 @@ const Contact = () => {
           </motion.p>
         </motion.div>
 
-        <div className="space-y-16">
+        <div className="space-y-8 sm:space-y-12 md:space-y-16">
           {/* Contact Form */}
           <motion.div
-            className="glass-card p-8 rounded-2xl max-w-[800px] mx-auto border border-white/10"
+            className="glass-card p-4 sm:p-6 md:p-8 rounded-2xl max-w-[800px] mx-auto border border-white/10"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <motion.h3
-              className="text-2xl font-semibold mb-8 flex items-center gap-3"
+              className="text-xl sm:text-2xl font-semibold mb-6 sm:mb-8 flex items-center gap-3"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
-              <Send className="w-6 h-6 text-primary" />
+              <Send className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
               Send us a message
             </motion.h3>
 
@@ -180,9 +180,9 @@ const Contact = () => {
               </motion.div>
             )}
 
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               <motion.div
-                className="grid md:grid-cols-2 gap-6"
+                className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
@@ -215,7 +215,7 @@ const Contact = () => {
               </motion.div>
 
               <motion.div
-                className="grid md:grid-cols-2 gap-6"
+                className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.7 }}
@@ -264,7 +264,7 @@ const Contact = () => {
               </motion.div>
 
               <motion.div
-                className="grid md:grid-cols-2 gap-6"
+                className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.9 }}
@@ -392,36 +392,36 @@ const Contact = () => {
                   <Button
                     onClick={handleSubmit}
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white py-3 h-auto text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white py-3 sm:py-4 h-auto text-base sm:text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? "Sending..." : "Send Message"}
-                    <Send className="w-5 h-5 ml-3" />
+                    <Send className="w-4 h-4 sm:w-5 sm:h-5 ml-2 sm:ml-3" />
                   </Button>
                 </motion.div>
               </motion.div>
             </div>
           </motion.div>
           <motion.div
-            className="glass-card p-6 rounded-2xl bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-blue-500/10 border-purple-500/20 mt-12"
+            className="glass-card p-4 sm:p-6 rounded-2xl bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-blue-500/10 border-purple-500/20 mt-8 sm:mt-12"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
             whileHover={{ scale: 1.02 }}
           >
-            <div className="flex flex-col md:flex-row items-center justify-center gap-8 text-center">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 md:gap-8 text-center">
               <div className="flex items-center gap-2">
-                <span className="text-2xl">📧</span>
-                <span className="text-sm font-medium">
+                <span className="text-xl sm:text-2xl">📧</span>
+                <span className="text-xs sm:text-sm font-medium break-all sm:break-normal">
                   contactpixelpulselabs@gmail.com
                 </span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-2xl">📱</span>
-                <span className="text-sm font-medium">+94 76 482 337 2</span>
+                <span className="text-xl sm:text-2xl">📱</span>
+                <span className="text-xs sm:text-sm font-medium">+94 76 482 337 2</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-2xl">⏰</span>
-                <span className="text-sm font-medium">Mon-Fri, 9AM-6PM</span>
+                <span className="text-xl sm:text-2xl">⏰</span>
+                <span className="text-xs sm:text-sm font-medium">Mon-Fri, 9AM-6PM</span>
               </div>
             </div>
           </motion.div>

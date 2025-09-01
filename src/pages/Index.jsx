@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import Stats from "@/components/Stats";
 import Services from "@/components/Services";
 import Portfolio from "@/components/Portfolio";
 import Team from "@/components/Team";
@@ -25,8 +26,13 @@ const Index = () => {
         <About />
       </section>
 
+      {/* Stats Section */}
+      <section id="stats" className="relative">
+        <Stats />
+      </section>
+
       {/* Services Section - Dark Blue */}
-      <section id="services" className="relative ">
+      <section id="services" className="relative bg-gray-900">
         <Services />
       </section>
 
@@ -46,7 +52,7 @@ const Index = () => {
       </section>
 
       {/* Contact Section - Dark Blue */}
-      <section id="contact" className="relative ">
+      <section id="contact" className="relat">
         <Contact />
       </section>
 
