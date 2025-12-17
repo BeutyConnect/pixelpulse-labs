@@ -1,4 +1,5 @@
 import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -47,11 +48,11 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-muted-foreground">
-              <li><a href="#" className="hover:text-primary transition-smooth">Web Development</a></li>
-              <li><a href="#" className="hover:text-primary transition-smooth">Mobile Apps</a></li>
-              <li><a href="#" className="hover:text-primary transition-smooth">SEO Services</a></li>
-              <li><a href="#" className="hover:text-primary transition-smooth">Google Ads</a></li>
-              <li><a href="#" className="hover:text-primary transition-smooth">Facebook Ads</a></li>
+              <li><Link to="/services" className="hover:text-primary transition-smooth">Web Development</Link></li>
+              <li><Link to="/services" className="hover:text-primary transition-smooth">Mobile Apps</Link></li>
+              <li><Link to="/services" className="hover:text-primary transition-smooth">SEO Services</Link></li>
+              <li><Link to="/services" className="hover:text-primary transition-smooth">Google Ads</Link></li>
+              <li><Link to="/services" className="hover:text-primary transition-smooth">Facebook Ads</Link></li>
             </ul>
           </div>
 
@@ -59,11 +60,11 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-muted-foreground">
-              <li><a href="#" className="hover:text-primary transition-smooth">About Us</a></li>
-              <li><a href="#" className="hover:text-primary transition-smooth">Portfolio</a></li>
-              <li><a href="#" className="hover:text-primary transition-smooth">Team</a></li>
-              <li><a href="#" className="hover:text-primary transition-smooth">Contact</a></li>
-              <li><a href="#" className="hover:text-primary transition-smooth">Blog</a></li>
+              <li><Link to="/about" className="hover:text-primary transition-smooth">About Us</Link></li>
+              <li><Link to="/portfolio" className="hover:text-primary transition-smooth">Portfolio</Link></li>
+              <li><Link to="/team" className="hover:text-primary transition-smooth">Team</Link></li>
+              <li><Link to="/contact" className="hover:text-primary transition-smooth">Contact</Link></li>
+              <li><Link to="/blog" className="hover:text-primary transition-smooth">Blog</Link></li>
             </ul>
           </div>
         </div>
@@ -74,9 +75,9 @@ const Footer = () => {
             © {currentYear} PixelPulse Labs. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm text-muted-foreground">
-            <a href="#" className="hover:text-primary transition-smooth">Privacy Policy</a>
-            <a href="#" className="hover:text-primary transition-smooth">Terms of Service</a>
-            <a href="#" className="hover:text-primary transition-smooth">Cookie Policy</a>
+            <Link to="/privacy-policy" className="hover:text-primary transition-smooth">Privacy Policy</Link>
+            <Link to="/terms-of-service" className="hover:text-primary transition-smooth">Terms of Service</Link>
+            <Link to="/cookie-policy" className="hover:text-primary transition-smooth">Cookie Policy</Link>
           </div>
         </div>
       </div>

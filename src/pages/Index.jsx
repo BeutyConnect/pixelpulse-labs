@@ -7,16 +7,18 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import Contact from "@/components/Contact";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
+import Navigation from "@/components/Navigation";
 
 import ScrollAnimations from "@/components/ScrollAnimations";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Navigation />
       <ScrollAnimations />
 
       {/* Hero Section */}
-      <section id="home" className="relative">
+      <section id="home" className="relative pt-16">
         <Hero />
       </section>
 

@@ -39,46 +39,6 @@ const Team = () => {
       avatar: "/nipun.jpg",
       social: { linkedin: "#", twitter: "#", github: "#" },
     },
-    {
-      name: "Shanika Dilrukshi",
-      role: "Business Analyst",
-      avatar: "/shanika.jpg",
-      social: {
-        linkedin: "https://www.linkedin.com/in/shanika-dilrukshi-82aa6a295/",
-        twitter: "#",
-        github: "#",
-      },
-    },
-    {
-      name: "Darshani Kumari",
-      role: "Frontend Engineer",
-      avatar: "/darshani.jpg",
-      social: {
-        linkedin: "https://www.linkedin.com/in/darshani-kumari-149219308/",
-        twitter: "#",
-        github: "#",
-      },
-    },
-    {
-      name: "Ernaga Madhushan",
-      role: "Lead Mobile Developer",
-      avatar: "/eranga.jpg",
-      social: {
-        linkedin: "https://www.linkedin.com/in/erangamadhushan/",
-        twitter: "#",
-        github: "#",
-      },
-    },
-    {
-      name: "Pasindu Iroshan",
-      role: "Backend Engineer",
-      avatar: "/pasindu.jpg",
-      social: {
-        linkedin: "https://www.linkedin.com/in/pasindu-iroshan-9423a72b4/",
-        twitter: "#",
-        github: "#",
-      },
-    },
   ];
 
   return (
