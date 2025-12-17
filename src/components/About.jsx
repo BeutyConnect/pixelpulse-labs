@@ -1,52 +1,52 @@
-import { Users, Target, Lightbulb, Shield } from "lucide-react";
+import { Code2, Rocket, Users2, Zap } from "lucide-react";
 import { motion } from "framer-motion";
 
 const About = () => {
   const values = [
     {
-      icon: Users,
-      title: "Members of Team",
-      description: "CEO, CTO, Developers, and Marketing Specialist working in perfect harmony"
+      icon: Code2,
+      title: "Expert Development",
+      description: "Full-stack developers specializing in modern web and mobile technologies"
     },
     {
-      icon: Lightbulb,
-      title: "Creative Innovation",
-      description: "We think outside the box to deliver unique solutions that set you apart"
+      icon: Rocket,
+      title: "Cutting-Edge Solutions",
+      description: "We leverage the latest technologies to build scalable, high-performance software"
     },
     {
-      icon: Target,
-      title: "Results-Driven",
-      description: "Every project is measured by its impact on your business growth"
+      icon: Users2,
+      title: "Collaborative Approach",
+      description: "We work closely with clients throughout the development lifecycle"
     },
     {
-      icon: Shield,
-      title: "Reliable Partnership",
-      description: "Consistent communication and delivery you can count on"
+      icon: Zap,
+      title: "Rapid Delivery",
+      description: "Agile development methodology ensuring faster time-to-market"
     }
   ];
 
   return (
-    <section className="py-24 px-6">
+    <section className="py-12 sm:py-16 md:py-24 px-4 sm:px-6">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
             About <span className="hero-text">PixelPulse Labs</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We're a passionate  team of members dedicated to transforming your digital presence. 
-            Our unique blend of technical expertise and creative vision delivers exceptional results.
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-2 sm:px-0">
+            We're a dedicated software development company specializing in creating innovative digital solutions. 
+            From web applications to mobile apps, we turn your ideas into powerful, scalable software products.
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {values.map((value, index) => (
             <motion.div 
               key={index}
-              className="glass-card p-6 rounded-2xl group cursor-pointer relative overflow-hidden"
+              className="glass-card p-4 sm:p-6 rounded-2xl group cursor-pointer relative overflow-hidden"
               whileHover={{ 
-                scale: 1.05,
-                y: -10,
-                boxShadow: "0 25px 50px rgba(6, 182, 212, 0.2)"
+                scale: 1.02,
+                y: -5,
+                boxShadow: "0 15px 30px rgba(6, 182, 212, 0.15)"
               }}
               whileTap={{ scale: 0.95 }}
               initial={{ opacity: 0, y: 50 }}
@@ -62,7 +62,7 @@ const About = () => {
             >
               {/* Hover overlay */}
               <motion.div 
-                className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-sky-500/10 opacity-0"
+                className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-purple-600/10 opacity-0"
                 whileHover={{ opacity: 1 }}
                 transition={{ duration: 0.3 }}
               />
@@ -70,23 +70,23 @@ const About = () => {
               <div className="relative z-10">
                 <div className="mb-4">
                   <motion.div 
-                    className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-sky-500 rounded-xl flex items-center justify-center"
+                    className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center"
                     whileHover={{ 
-                      rotate: 360,
-                      boxShadow: "0 0 30px rgba(6, 182, 212, 0.6)"
+                      rotate: 180,
+                      boxShadow: "0 0 25px rgba(99, 102, 241, 0.5)"
                     }}
-                    transition={{ duration: 0.6 }}
+                    transition={{ duration: 0.4 }}
                   >
-                    <value.icon className="w-6 h-6 text-white" />
+                    <value.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </motion.div>
                 </div>
                 <motion.h3 
-                  className="text-xl font-semibold mb-3"
-                  whileHover={{ color: "#06b6d4" }}
+                  className="text-lg sm:text-xl font-semibold mb-3"
+                  whileHover={{ color: "#6366f1" }}
                 >
                   {value.title}
                 </motion.h3>
-                <p className="text-muted-foreground leading-relaxed">{value.description}</p>
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{value.description}</p>
               </div>
             </motion.div>
           ))}
